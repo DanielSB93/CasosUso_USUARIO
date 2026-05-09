@@ -12,7 +12,7 @@ class TestUsuarioCasosUso {
     // ==========================================
     @Test
     void TC1_CE1_CE5_CE13_CE20(){
-        usuario = new Usuario("1234", "aB345", 27, "abc@def.ghi");
+        usuario = new Usuario("1234", "aB345", 27, "a@b.c");
         assertTrue(usuario.validarRegistro());
     }
 
@@ -21,19 +21,19 @@ class TestUsuarioCasosUso {
     // ==========================================
     @Test
     void TC2_CE2_CE5_CE13_CE20(){
-        usuario = new Usuario(null, "aB345", 27, "abc@def.ghi");
+        usuario = new Usuario(null, "aB345", 27, "a@b.c");
         assertFalse(usuario.validarRegistro());
     }
 
     @Test
     void TC3_CE3_CE5_CE13_CE20(){
-        usuario = new Usuario("", "aB345", 27, "abc@def.ghi");
+        usuario = new Usuario("", "aB345", 27, "a@b.c");
         assertFalse(usuario.validarRegistro());
     }
 
     @Test
     void TC4_CE4_CE5_CE13_CE20(){
-        usuario = new Usuario("12345678", "aB345", 27, "abc@def.ghi");
+        usuario = new Usuario("12345678", "aB345", 27, "a@b.c");
         assertFalse(usuario.validarRegistro());
     }
 
@@ -42,43 +42,43 @@ class TestUsuarioCasosUso {
     // ==========================================
     @Test
     void TC5_CE1_CE6_CE13_CE20(){
-        usuario = new Usuario("1234", null, 27, "abc@def.ghi");
+        usuario = new Usuario("1234", null, 27, "a@b.c");
         assertFalse(usuario.validarRegistro());
     }
 
     @Test
     void TC6_CE1_CE7_CE13_CE20(){
-        usuario = new Usuario("1234", "aB3", 27, "abc@def.ghi");
+        usuario = new Usuario("1234", "aB3", 27, "a@b.c");
         assertFalse(usuario.validarRegistro());
     }
 
     @Test
     void TC7_CE1_CE8_CE13_CE20(){
-        usuario = new Usuario("1234", "aB34567890", 27, "abc@def.ghi");
+        usuario = new Usuario("1234", "aB34567890", 27, "a@b.c");
         assertFalse(usuario.validarRegistro());
     }
 
     @Test
     void TC8_CE1_CE9_CE13_CE20(){
-        usuario = new Usuario("1234", "B3456", 27, "abc@def.ghi"); // Falta minúscula
+        usuario = new Usuario("1234", "B3456", 27, "a@b.c"); // Falta minúscula
         assertFalse(usuario.validarRegistro());
     }
 
     @Test
     void TC9_CE1_CE10_CE13_CE20(){
-        usuario = new Usuario("1234", "a3456", 27, "abc@def.ghi"); // Falta mayúscula
+        usuario = new Usuario("1234", "a3456", 27, "a@b.c"); // Falta mayúscula
         assertFalse(usuario.validarRegistro());
     }
 
     @Test
     void TC10_CE1_CE11_CE13_CE20(){
-        usuario = new Usuario("1234", "aBcde", 27, "abc@def.ghi"); // Faltan números
+        usuario = new Usuario("1234", "aBcde", 27, "a@b.c"); // Faltan números
         assertFalse(usuario.validarRegistro());
     }
 
     @Test
     void TC11_CE1_CE12_CE13_CE20(){
-        usuario = new Usuario("1234", "aB3?5", 27, "abc@def.ghi"); // Carácter especial no permitido
+        usuario = new Usuario("1234", "aB3?5", 27, "a@b.c"); // Carácter especial no permitido
         assertFalse(usuario.validarRegistro());
     }
 
@@ -99,7 +99,7 @@ class TestUsuarioCasosUso {
 
     @Test
     void TC14_CE1_CE5_CE16_CE20(){
-        usuario = new Usuario("1234", "aB345", 27, "ab.ghi");
+        usuario = new Usuario("1234", "aB345", 27, "ab.c");
         assertFalse(usuario.validarRegistro());
     }
 
@@ -126,7 +126,7 @@ class TestUsuarioCasosUso {
     // ==========================================
     @Test
     void TC18_CE1_CE5_CE13_CE21(){
-        usuario = new Usuario("1234", "aB345", 5, "abc@def.ghi");
+        usuario = new Usuario("1234", "aB345", 5, "a@b.c");
         assertFalse(usuario.validarRegistro());
     }
 }
