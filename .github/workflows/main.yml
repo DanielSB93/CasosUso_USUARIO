@@ -2,7 +2,9 @@ name: CI con Maven
 
 on:
   push:
-    [cite_start]branches: [ "main" ] # Se ejecuta al hacer push [cite: 11]
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   build:
@@ -10,14 +12,14 @@ jobs:
 
     steps:
     - name: Descargar el proyecto
-      [cite_start]uses: actions/checkout@v4 # Paso: descargar proyecto [cite: 12]
+      uses: actions/checkout@v4
 
     - name: Configurar Java 17
-      [cite_start]uses: actions/setup-java@v4 # Paso: configurar Java [cite: 13, 21]
+      uses: actions/setup-java@v4
       with:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
 
     - name: Ejecutar pruebas Maven
-      [cite_start]run: mvn test # Paso: ejecutar pruebas [cite: 14, 30]
+      run: mvn test
