@@ -29,7 +29,7 @@ public class Usuario {
 
     public boolean validarUsuario() {
         if (usuario == null) return false;
-        return usuario.matches(".{2,2}");
+        return usuario.matches(".{2,5}");
     }
 
     public boolean validarContrasena() {
