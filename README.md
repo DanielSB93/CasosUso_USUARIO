@@ -1,3 +1,9 @@
+
+<!-- ESTATUS PRUEBAS -->
+[![CI con Maven](https://github.com/DanielSB93/CasosUso_USUARIO/actions/workflows/main.yml/badge.svg)](https://github.com/DanielSB93/CasosUso_USUARIO/actions/workflows/main.yml)
+
+
+
 <!-- Enlace al PDF centrado -->
 <p align="center">
   <a href="src/main/resources/TEST_USUARIO_OFICIAL.pdf">
