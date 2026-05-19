@@ -29,3 +29,10 @@ jobs:
     # AMPLIACIÓN: Cambiamos 'mvn test' por 'mvn verify'
     - name: Ejecutar pruebas y verificar con Maven
       run: mvn clean verify
+
+    # AMPLIACIÓN: "Otros" - Guardar el ejecutable .jar
+    - name: Guardar el archivo JAR empaquetado
+      uses: actions/upload-artifact@v4
+      with:
+        name: ejecutable-java-jdk-${{ matrix.java-version }}
+        path: target/*.jar
